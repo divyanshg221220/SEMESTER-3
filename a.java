@@ -1,4 +1,4 @@
-class a{
-	 public static void main(String[] args)
+class a {
+	 public static void main(String[] args) {}
 }
-class b{}
+class b {}
