@@ -5,9 +5,9 @@ int main(int argc, char const *argv[])
 {
     int n = 0;
     int arr[size];
+    printf("ENTER 0 TO EXIT\n");
     for (int i = 0; i < size; i++)
     {
-        printf("ENTER 0 TO EXIT\n");
         printf("Enter [%d] element: ", i);
         int temp;
         scanf("%d", &temp);
