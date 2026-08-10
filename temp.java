@@ -1,4 +1,0 @@
-class temp1 {
-	 public static void main(String[] args) {}
-}
-class temp2 {}
