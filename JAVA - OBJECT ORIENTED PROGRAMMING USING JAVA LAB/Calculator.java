@@ -1,16 +1,16 @@
 // 1. Make a calculator program using simple class
 import java.util.Scanner;
 public class Calculator {
-    public static void add(int a, int b) {
+    public void add(int a, int b) {
         System.out.println("Result: " + (a + b));
     }
-    public static void subtract(int a, int b) {
+    public void subtract(int a, int b) {
         System.out.println("Result: " + (a - b));
     }
-    public static void multiply(int a, int b) {
+    public void multiply(int a, int b) {
         System.out.println("Result: " + (a * b));
     }
-    public static void divide(int a, int b) {
+    public void divide(int a, int b) {
         if (b != 0) {
             System.out.println("Result: " + (a / b));
         }
@@ -33,18 +33,19 @@ class Main {
             int a = scanner.nextInt();
             System.out.print("Enter second number: ");
             int b = scanner.nextInt();
+            Calculator calculator = new Calculator();
             switch (q) {
                 case '+':
-                    Calculator.add(a, b);
+                    calculator.add(a, b);
                     break;
                 case '-':
-                    Calculator.subtract(a, b);
+                    calculator.subtract(a, b);
                     break;
                 case '*':
-                    Calculator.multiply(a, b);
+                    calculator.multiply(a, b);
                     break;
                 case '/':
-                    Calculator.divide(a, b);
+                    calculator.divide(a, b);
                     break;
             }
         }
