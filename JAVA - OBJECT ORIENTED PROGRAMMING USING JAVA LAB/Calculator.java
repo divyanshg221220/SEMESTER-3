@@ -1,4 +1,4 @@
-// 1. Make a calculator program using simple class
+// 1. Write a program to make a simple calculator class.
 import java.util.Scanner;
 public class Calculator {
     public void add(int a, int b) {
