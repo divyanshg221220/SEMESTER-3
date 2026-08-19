@@ -1,3 +1,4 @@
+// Implement merge procedure by taking two different user input arrays
 #include <stdio.h>
 int main(int argc, char const *argv[])
 {
