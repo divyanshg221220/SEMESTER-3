@@ -1,5 +1,6 @@
 // Implement the binary search using divide and conquer technique
 #include <stdio.h>
+#define size 100
 int binarySearch(int arr[], int l, int h, int key)
 {
     if (h >= l)
@@ -25,14 +26,20 @@ int binarySearch(int arr[], int l, int h, int key)
 }
 int main(int argc, char const *argv[])
 {
-    int n, key;
-    printf("Enter number of elements to insert in array: ");
-    scanf("%d", &n);
-    int arr[n];
-    for (int i = 0; i < n; i++)
+    int n = 0, key;
+    int arr[size];
+    printf("ENTER 0 TO EXIT\n");
+    for (int i = 0; i < size; i++)
     {
         printf("Enter [%d] element: ", i);
-        scanf("%d", &arr[i]);
+        int temp;
+        scanf("%d", &temp);
+        if (temp == 0)
+        {
+            break;
+        }
+        arr[i] = temp;
+        n++;
     }
     printf("Enter the key to search: ");
     scanf("%d", &key);
