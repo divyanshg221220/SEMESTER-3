@@ -1,23 +1,40 @@
 // Implement merge procedure by taking two different user input arrays
 #include <stdio.h>
+#define size 100
 int main(int argc, char const *argv[])
 {
-    int n, m;
-    printf("Enter number of elements to insert in first array: ");
-    scanf("%d", &n);
-    int arr1[n];
-    for (int i = 0; i < n; i++)
+    int n = 0;
+    int arr1[size];
+    printf("Enter first array elements\n");
+    printf("ENTER 0 TO EXIT\n");
+    for (int i = 0; i < size; i++)
     {
         printf("Enter [%d] element: ", i);
-        scanf("%d", &arr1[i]);
+        int temp;
+        scanf("%d", &temp);
+        if (temp == 0)
+        {
+            break;
+        }
+        arr1[i] = temp;
+        n++;
     }
-    printf("Enter number of elements to insert in second array: ");
-    scanf("%d", &m);
-    int arr2[m];
-    for (int i = 0; i < m; i++)
+    printf("\n");
+    int m = 0;
+    int arr2[size];
+    printf("Enter second array elements\n");
+    printf("ENTER 0 TO EXIT\n");
+    for (int i = 0; i < size; i++)
     {
         printf("Enter [%d] element: ", i);
-        scanf("%d", &arr2[i]);
+        int temp;
+        scanf("%d", &temp);
+        if (temp == 0)
+        {
+            break;
+        }
+        arr2[i] = temp;
+        m++;
     }
     int arr[n + m];
     int i = 0, j = 0, k = 0;
