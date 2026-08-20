@@ -1,21 +1,21 @@
 // Implement the binary search using divide and conquer technique
 #include <stdio.h>
-int binarySearch(int arr[], int i, int j, int key)
+int binarySearch(int arr[], int low, int high, int key)
 {
-    if (j >= i)
+    if (high >= low)
     {
-        int mid =(i + j) / 2;
+        int mid =(low + high) / 2;
         if (arr[mid] == key)
         {
             return mid;
         }
         else if (arr[mid] > key)
         {
-            return binarySearch(arr, i, mid - 1, key);
+            return binarySearch(arr, low, mid - 1, key);
         }
         else
         {
-            return binarySearch(arr, mid + 1, j, key);
+            return binarySearch(arr, mid + 1, high, key);
         }
     }
     else
