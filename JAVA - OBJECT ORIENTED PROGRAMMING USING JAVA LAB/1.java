@@ -1,6 +1,6 @@
 // 1. Write a program to make a simple calculator class.
 import java.util.Scanner;
-public class Calculator {
+class Calculator {
     public void add(int a, int b) {
         System.out.println("Result: " + (a + b));
     }
@@ -19,7 +19,7 @@ public class Calculator {
         }
     }
 }
-class Main {
+class CalculatorMain {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter + for Addition");
