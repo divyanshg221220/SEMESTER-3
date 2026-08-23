@@ -13,8 +13,7 @@ class Calculator {
     public void divide(int a, int b) {
         if (b != 0) {
             System.out.println("Result: " + (a / b));
-        }
-        else {
+        } else {
             System.out.println("Division by zero is not allowed");
         }
     }
@@ -48,8 +47,7 @@ class CalculatorMain {
                     calculator.divide(a, b);
                     break;
             }
-        }
-        else {
+        } else {
             System.out.println("Invalid Input");
         }
         scanner.close();
