@@ -1,4 +1,4 @@
-// 2. Create a Student Class with Getter and Setter Functions and create object in separate Main class
+// Create a Student Class with Getter and Setter Functions and create object in separate Main class
 import java.util.Scanner;
 class Student {
     private int enrolNo;
