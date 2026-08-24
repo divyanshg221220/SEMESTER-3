@@ -30,20 +30,20 @@ class Student {
     public int getDate() {
         return date;
     }
-    public void setDate(int dd) {
-        this.date = dd;
+    public void setDate(int date) {
+        this.date = date;
     }
     public int getMonth() {
         return month;
     }
-    public void setMonth(int mm) {
-        this.month = mm;
+    public void setMonth(int month) {
+        this.month = month;
     }
     public int getYear() {
         return year;
     }
-    public void setYear(int yyyy) {
-        this.year = yyyy;
+    public void setYear(int year) {
+        this.year = year;
     }
     public String getBatch() {
         return batch;
@@ -78,12 +78,12 @@ class StudentMain {
             System.out.println("Invalid Input");
         }
         System.out.print("Enter Date of Birth (dd mm yyyy): ");
-        int dd = scanner.nextInt();
-        int mm = scanner.nextInt();
-        int yyyy = scanner.nextInt();
-        student.setDate(dd);
-        student.setMonth(mm);
-        student.setYear(yyyy);
+        int date = scanner.nextInt();
+        int month = scanner.nextInt();
+        int year = scanner.nextInt();
+        student.setDate(date);
+        student.setMonth(month);
+        student.setYear(year);
         System.out.print("Enter Batch and Branch (batch branch): ");
         String batch = scanner.next();
         student.setBatch(batch);
