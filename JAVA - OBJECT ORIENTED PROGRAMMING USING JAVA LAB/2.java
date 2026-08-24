@@ -63,27 +63,27 @@ class StudentMain {
         Scanner scanner = new Scanner(System.in);
         Student student = new Student();
         System.out.print("Enter Enrolment Number: ");
-        int enrolNo = scanner.nextInt();
-        student.setEnrolNo(enrolNo);
+        int enr = scanner.nextInt();
+        student.setEnrolNo(enr);
         System.out.print("Enter Name: ");
-        String name = scanner.next();
-        student.setName(name);
+        String s = scanner.next();
+        student.setName(s);
         System.out.print("Enter Gender (M/F): ");
-        char gender = scanner.next().charAt(0);
-        if (gender == 'M' || gender == 'm') {
+        char g = scanner.next().charAt(0);
+        if (g == 'M' || g == 'm') {
             student.setGender(Student.Gender.MALE);
-        } else if (gender == 'F' || gender == 'f') {
+        } else if (g == 'F' || g == 'f') {
             student.setGender(Student.Gender.FEMALE);
         } else {
             System.out.println("Invalid Input");
         }
         System.out.print("Enter Date of Birth (dd mm yyyy): ");
-        int date = scanner.nextInt();
-        int month = scanner.nextInt();
-        int year = scanner.nextInt();
-        student.setDate(date);
-        student.setMonth(month);
-        student.setYear(year);
+        int dd = scanner.nextInt();
+        int mm = scanner.nextInt();
+        int yyyy = scanner.nextInt();
+        student.setDate(dd);
+        student.setMonth(mm);
+        student.setYear(yyyy);
         System.out.print("Enter Batch and Branch (batch branch): ");
         String batch = scanner.next();
         student.setBatch(batch);
