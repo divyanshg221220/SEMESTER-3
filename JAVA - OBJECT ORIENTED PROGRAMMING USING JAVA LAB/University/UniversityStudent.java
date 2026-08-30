@@ -2,7 +2,7 @@ package University;
 public class UniversityStudent {
     private int rollNo;
     private String name;
-    private String instituteCode;
+    private int instituteCode;
     public int getRollNo() {
         return rollNo;
     }
@@ -15,10 +15,10 @@ public class UniversityStudent {
     public void setName(String name) {
         this.name = name;
     }
-    public String getInstituteCode() {
+    public int getInstituteCode() {
         return instituteCode;
     }
-    public void setInstituteCode(String instituteCode) {
+    public void setInstituteCode(int instituteCode) {
         this.instituteCode = instituteCode;
     }
 }

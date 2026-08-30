@@ -3,8 +3,8 @@
 // 1. Make the Student Class part of University Package.
 // 2. Make a separate file for Main Class which is a part of default package and import university package in the same to input and print student data.
 // Hint: Use Access Modifiers and Packages.
-import java.util.Scanner;
 import University.UniversityStudent;
+import java.util.Scanner;
 class UniversityStudentMain {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -16,9 +16,9 @@ class UniversityStudentMain {
         String name = scanner.next();
         UniversityStudent.setName(name);
         System.out.print("Enter Institute Code: ");
-        String instituteCode = scanner.next();
+        int instituteCode = scanner.nextInt();
         UniversityStudent.setInstituteCode(instituteCode);
-        System.out.println("\nStudent Details:");
+        System.out.println("\nStudent Details");
         System.out.println("Roll Number: " + UniversityStudent.getRollNo());
         System.out.println("Name: " + UniversityStudent.getName());
         System.out.println("Institute Code: " + UniversityStudent.getInstituteCode());
