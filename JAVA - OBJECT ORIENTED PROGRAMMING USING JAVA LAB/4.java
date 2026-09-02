@@ -5,7 +5,7 @@ class ManufacturingUnit {
     
 }
 class Car{
-    
+    static int objCount = 0;
 }
 class ManufacturingUnitMain {
     
