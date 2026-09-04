@@ -11,7 +11,7 @@ class Car {
     }
 }
 class ManufacturingUnit {
-    public void produceUnits(int count) {
+    public void pSum(int count) {
         for (int i = 0; i < count; i++) {
             new Car();
         }
@@ -23,7 +23,7 @@ class ManufacturingUnitMain {
         ManufacturingUnit manufacturingUnit = new ManufacturingUnit();
         System.out.print("Enter the number of units to produce: ");
         int count = scanner.nextInt();
-        manufacturingUnit.produceUnits(count);
+        manufacturingUnit.pSum(count);
         System.out.println("Total number of car produced: " + Car.getObjCount());
         int noOfWheels = 4;
         System.out.println("Total number of wheels produced: " + noOfWheels * Car.getObjCount());
