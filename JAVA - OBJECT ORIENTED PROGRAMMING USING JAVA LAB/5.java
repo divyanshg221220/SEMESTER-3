@@ -20,10 +20,10 @@ class Calculator {
     }
 }
 class ScientificCalculator extends Calculator {
-    public void log(double a) {
+    public void log(int a) {
         System.out.println("Result: " + Math.log(a));
     }
-    public void exponent(double a, double b) {
+    public void exponent(int a, int b) {
         System.out.println("Result: " + Math.pow(a, b));
     }
 }
@@ -41,14 +41,14 @@ class ScientificCalculatorMain {
         if (q == '+' || q == '-' || q == '*' || q == '/' || q == 'l' || q == 'e') {
             ScientificCalculator scientificcalculator = new ScientificCalculator();
             if (q == 'l') {
-                System.out.print("Enter number for logarithm: ");
-                double a = scanner.nextDouble();
+                System.out.print("Enter logarithm number: ");
+                int a = scanner.nextInt();
                 scientificcalculator.log(a);
             } else if (q == 'e') {
                 System.out.print("Enter base number: ");
-                double a = scanner.nextDouble();
+                int a = scanner.nextInt();
                 System.out.print("Enter exponent number: ");
-                double b = scanner.nextDouble();
+                int b = scanner.nextInt();
                 scientificcalculator.exponent(a, b);
             } else {
                 System.out.print("Enter first number: ");
