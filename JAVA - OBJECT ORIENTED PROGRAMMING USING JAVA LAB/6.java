@@ -41,19 +41,19 @@ class AbstractCalculatorMain {
             int a = scanner.nextInt();
             System.out.print("Enter second number: ");
             int b = scanner.nextInt();
-            AdvancedCalculator calculator = new AdvancedCalculator();
+            AdvancedCalculator advancedcalculator = new AdvancedCalculator();
             switch (q) {
                 case '+':
-                    calculator.add(a, b);
+                    advancedcalculator.add(a, b);
                     break;
                 case '-':
-                    calculator.subtract(a, b);
+                    advancedcalculator.subtract(a, b);
                     break;
                 case '*':
-                    calculator.multiply(a, b);
+                    advancedcalculator.multiply(a, b);
                     break;
                 case '/':
-                    calculator.divide(a, b);
+                    advancedcalculator.divide(a, b);
                     break;
             }
         } else {
