@@ -1,29 +1,29 @@
 // Interfaces
 // Realize the diamond structure using the concept of multiple inheritance through interfaces.
 interface EduMin {
-    void edumin();
+    void nep();
 }
 interface UGC extends EduMin {
-    void ugc();
+    void recognize();
 }
 interface AICTE extends EduMin {
-    void aicte();
+    void acredit();
 }
 interface Uni extends UGC, AICTE {
     void uni();
 }
 class GGSIPU implements Uni {
-    @Override
-    public void edumin() {
-        System.out.println("Education Ministry of India");
+    @Override 
+    public void nep() {
+        System.out.println("National Education Policy Provided by Education Ministry of India");
     }
     @Override
-    public void ugc() {
-        System.out.println("University Grants Commission");
+    public void recognize() {
+        System.out.println("Recognized by University Grants Commission");
     }
     @Override
-    public void aicte() {
-        System.out.println("All India Council for Technical Education");
+    public void acredit() {
+        System.out.println("Accredited by All India Council for Technical Education");
     }
     @Override
     public void uni() {
@@ -33,9 +33,9 @@ class GGSIPU implements Uni {
 class InterfaceMain {
     public static void main(String[] args) {
         GGSIPU ggsipu = new GGSIPU();
-        ggsipu.edumin();
-        ggsipu.ugc();
-        ggsipu.aicte();
+        ggsipu.nep();
+        ggsipu.recognize();
+        ggsipu.acredit();
         ggsipu.uni();
     }
 }
