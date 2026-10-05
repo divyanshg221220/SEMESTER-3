@@ -1,15 +1,15 @@
 // Interfaces
 // Realize the diamond structure using the concept of multiple inheritance through interfaces.
-public interface EduMin {
+interface EduMin {
     void edumin();
 }
-public interface UGC extends EduMin {
+interface UGC extends EduMin {
     void ugc();
 }
-public interface AICTE extends EduMin {
+interface AICTE extends EduMin {
     void aicte();
 }
-public interface Uni extends UGC, AICTE {
+interface Uni extends UGC, AICTE {
     void uni();
 }
 class GGSIPU implements Uni {
