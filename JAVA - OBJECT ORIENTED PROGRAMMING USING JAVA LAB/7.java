@@ -33,9 +33,9 @@ class GGSIPU implements Uni {
 class InterfaceMain {
     public static void main(String[] args) {
         GGSIPU ggsipu = new GGSIPU();
+        ggsipu.uni();       
         ggsipu.nep();
         ggsipu.recognize();
         ggsipu.acredit();
-        ggsipu.uni();
     }
 }
