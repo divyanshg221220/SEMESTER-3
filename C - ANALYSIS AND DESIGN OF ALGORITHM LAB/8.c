@@ -38,8 +38,8 @@ void heapSort(int arr[], int n)
 }
 int main(int argc, char const *argv[])
 {
-	int arr[size];
 	int n = 0;
+	int arr[size];
 	printf("ENTER 0 TO EXIT\n");
 	for (int i = 0; i < size; i++)
 	{
