@@ -1,6 +1,7 @@
 // Implement the longest common subsequence problem and calculate its length using dynamic programming approach.
 #include <stdio.h>
 #include <string.h>
+#define size 100
 int max(int a, int b)
 {
     return (a > b) ? a : b;
@@ -22,7 +23,7 @@ int lcs(char *X, char *Y, int m, int n)
 }
 int main(int argc, char const *argv[])
 {
-    char X[25], Y[25];
+    char X[size], Y[size];
     printf("Enter the first string: ");
     scanf("%s", X);
     printf("Enter the second string: ");
