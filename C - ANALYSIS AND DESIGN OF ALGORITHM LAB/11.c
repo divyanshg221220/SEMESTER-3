@@ -5,7 +5,7 @@ int max(int a, int b)
 {
     return (a > b) ? a : b;
 }
-int lcs(char* X, char* Y, int m, int n)
+int lcs(char *X, char *Y, int m, int n)
 {
     if (m == 0 || n == 0)
     {
