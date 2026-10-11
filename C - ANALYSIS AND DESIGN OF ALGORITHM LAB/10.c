@@ -1,6 +1,7 @@
 // Implement the 0/1 knapsack problem using dynamic programming approach.
 #include <stdio.h>
 #define size 100
+int dp[size][size];
 int max(int a, int b)
 {
     return (a > b) ? a : b;
@@ -11,13 +12,17 @@ int knapsack(int W, int weight[], int values[], int n)
     {
         return 0;
     }
+    if (dp[n][W] != -1)
+    {
+        return dp[n][W];
+    }
     if (weight[n - 1] > W)
     {
-        return knapsack(W, weight, values, n - 1);
+        return dp[n][W] = knapsack(W, weight, values, n - 1);
     }
     else
     {
-        return max(values[n - 1] + knapsack(W - weight[n - 1], weight, values, n - 1), knapsack(W, weight, values, n - 1));
+        return dp[n][W] = max(values[n - 1] + knapsack(W - weight[n - 1], weight, values, n - 1), knapsack(W, weight, values, n - 1));
     }
 }
 int main(int argc, char const *argv[])
@@ -43,6 +48,13 @@ int main(int argc, char const *argv[])
     }
     printf("Enter the maximum weight of knapsack: ");
     scanf("%d", &W);
+    for (int i = 0; i <= n; i++)
+    {
+        for (int j = 0; j <= W; j++)
+        {
+            dp[i][j] = -1;
+        }
+    }
     printf("0/1 knapsack: %d\n", knapsack(W, weight, values, n));
     return 0;
 }
