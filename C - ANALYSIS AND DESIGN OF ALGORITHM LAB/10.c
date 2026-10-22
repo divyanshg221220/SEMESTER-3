@@ -32,10 +32,10 @@ int main(int argc, char const *argv[])
     printf("ENTER 0 AND 0 TO EXIT\n");
     for (int i = 0; i < size; i++)
     {
-        printf("Enter [%d] value: ", i);
+        printf("Enter [%d] value: ", i + 1);
         int temp1;
         scanf("%d", &temp1);
-        printf("Enter [%d] weight: ", i);
+        printf("Enter [%d] weight: ", i + 1);
         int temp2;
         scanf("%d", &temp2);
         if (temp1 == 0 && temp2 == 0)

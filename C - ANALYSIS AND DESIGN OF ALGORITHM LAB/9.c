@@ -1,5 +1,5 @@
-// Implement the matrix chain multiplication problem parenthesization problem using dynamic programing approach and calculate 
-// 1. Optimal number of multiplicaton.
+// Implement the matrix chain multiplication problem parenthesization problem using dynamic programming approach and calculate 
+// 1. Optimal number of multiplication.
 // 2. Optimal way of parenthesization.
 #include <stdio.h>
 #include <limits.h>
@@ -74,8 +74,8 @@ int main(int argc, char const *argv[])
             dp1[i][j] = -1;
         }
     }
-    printf("Optimal number of multiplicaton: %d", matrixChainOrder(arr, n));
-    printf("Optimal way of parenthesization:");
+    printf("Optimal number of multiplication: %d\n", matrixChainOrder(arr, n));
+    printf("Optimal way of parenthesization: ");
     matrixChainOrderRec(1, n - 1);
     return 0;
 }
