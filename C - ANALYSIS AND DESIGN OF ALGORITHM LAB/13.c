@@ -65,6 +65,6 @@ int main(int argc, char const *argv[])
         profit[i] = temp2;
         n++;
     }
-    printf("Job sequencing: %d", jobSequencing(deadline, profit, n));
+    printf("Job sequencing: %d\n", jobSequencing(deadline, profit, n));
     return 0;
 }
