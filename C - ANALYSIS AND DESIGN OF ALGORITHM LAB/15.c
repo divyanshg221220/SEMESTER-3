@@ -1,6 +1,7 @@
 // Implement the minimum cost spanning tree problem using kruskal's algorithm.
 #include <stdio.h>
 #include <stdlib.h>
+#define size 5
 int comparator(const int p1[], const int p2[])
 {
     return p1[2] - p2[2];
@@ -16,8 +17,7 @@ int findParent(int parent[], int component)
 {
     if (parent[component] == component)
         return component;
-    return parent[component]
-           = findParent(parent, parent[component]);
+    return parent[component] = findParent(parent, parent[component]);
 }
 void unionSet(int u, int v, int parent[], int rank[], int n)
 {
@@ -34,7 +34,20 @@ void unionSet(int u, int v, int parent[], int rank[], int n)
         rank[u]++;
     }
 }
-int kruskalAlgo(int n, int edge[n][3])
+int printMST(int parent[], int edge[][3], int n)
+{
+    int totalCost = 0;
+    printf("MST for the graph:\n");
+    printf("Edge \tWeight\n");
+    for (int i = 0; i < n; i++) {
+        if (parent[i] != i) {
+            printf("%d - %d \t%d \n", parent[i], i, edge[i][2]);
+            totalCost += edge[i][2];
+        }
+    }
+    return totalCost;
+}
+int kruskalMST(int n, int edge[n][3])
 {
     qsort(edge, n, sizeof(edge[0]), comparator);
     int parent[n];
@@ -50,15 +63,19 @@ int kruskalAlgo(int n, int edge[n][3])
             minCost += wt;
         }
     }
+    printMST(parent, edge, n);
     return minCost;
 }
-int main()
+int main(int argc, char const *argv[])
 {
-    int edge[5][3] = { { 0, 1, 10 },
-                       { 0, 2, 6 },
-                       { 0, 3, 5 },
-                       { 1, 3, 15 },
-                       { 2, 3, 4 } };
-    printf("%d",kruskalAlgo(5, edge));
+    int edge[size][3];
+    printf("Enter the edges matrix for the graph:\n");
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("Enter value for edge[%d][%d]: ", i, j);
+            scanf("%d", &edge[i][j]);
+        }
+    }
+    printf("MST: %d\n", kruskalMST(size, edge));
     return 0;
 }
