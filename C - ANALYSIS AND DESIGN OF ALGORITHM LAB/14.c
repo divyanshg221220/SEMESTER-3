@@ -1,12 +1,12 @@
 // Implement the minimum cost spanning tree problem using prim's algorithm.
-#include <limits.h>
-#include <stdbool.h>
 #include <stdio.h>
-#define V 5
+#include <stdbool.h>
+#include <limits.h>
+#define size 5
 int minweight(int weight[], bool visited[])
 {
     int min = INT_MAX, min_index;
-    for (int v = 0; v < V; v++) {
+    for (int v = 0; v < size; v++) {
         if (visited[v] == false && weight[v] < min) {
             min = weight[v];
             min_index = v;
@@ -14,49 +14,50 @@ int minweight(int weight[], bool visited[])
     }
     return min_index;
 }
-void printMST(int parent[], int graph[V][V])
+int printMST(int parent[], int graph[size][size])
 {
     int totalCost = 0;
     printf("MST for the graph:\n");
     printf("Edge \tWeight\n");
-    for (int i = 1; i < V; i++) {
-        printf("%d - %d \t%d \n", parent[i], i,
-               graph[i][parent[i]]);
+    for (int i = 1; i < size; i++) {
+        printf("%d - %d \t%d \n", parent[i], i, graph[i][parent[i]]);
         totalCost += graph[i][parent[i]];
     }
-    printf("Total cost of MST: %d\n", totalCost);
+    return totalCost;
 }
-void primMST(int graph[V][V])
+int primMST(int graph[size][size])
 {
-    int parent[V];
-    int weight[V];
-    bool visited[V];
-    for (int i = 0; i < V; i++) {
+    int parent[size];
+    int weight[size];
+    bool visited[size];
+    for (int i = 0; i < size; i++) {
         weight[i] = INT_MAX;
         visited[i] = false;
     }
     weight[0] = 0;
     parent[0] = -1;
-    for (int count = 0; count < V - 1; count++) {
+    for (int count = 0; count < size - 1; count++) {
         int u = minweight(weight, visited);
         visited[u] = true;
-        for (int v = 0; v < V; v++) {
-            if (graph[u][v] && visited[v] == false
-                && graph[u][v] < weight[v]) {
+        for (int v = 0; v < size; v++) {
+            if (graph[u][v] && visited[v] == false && graph[u][v] < weight[v]) {
                 parent[v] = u;
                 weight[v] = graph[u][v];
             }
         }
     }
-    printMST(parent, graph);
+    return printMST(parent, graph);
 }
-int main()
+int main(int argc, char const *argv[])
 {
-    int graph[V][V] = { { 0, 2, 0, 6, 0 },
-                        { 2, 0, 3, 8, 5 },
-                        { 0, 3, 0, 0, 7 },
-                        { 6, 8, 0, 0, 9 },
-                        { 0, 5, 7, 9, 0 } };
-    primMST(graph);
+    int graph[size][size];
+    printf("Enter the adjacency matrix for the graph:\n");
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            printf("Enter weight for edge (%d, %d): ", i, j);
+            scanf("%d", &graph[i][j]);
+        }
+    }
+    printf("MST: %d\n", primMST(graph));
     return 0;
 }
