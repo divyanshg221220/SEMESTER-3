@@ -54,7 +54,7 @@ int main(int argc, char const *argv[])
     printf("Enter the adjacency matrix for the graph:\n");
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < size; j++) {
-            printf("Enter weight for edge (%d, %d): ", i, j);
+            printf("Enter weight for edge [%d] [%d]: ", i, j);
             scanf("%d", &graph[i][j]);
         }
     }
