@@ -65,12 +65,12 @@ class MultiThreadingMain {
             System.out.println("Thread interrupted");
         }
         try {
-            Thread oddNumberRunnableThread = new Thread(new OddNumberRunnable());
-            Thread reverseNumberRunnableThread = new Thread(new ReverseNumberRunnable());
-            oddNumberRunnableThread.start();
-            reverseNumberRunnableThread.start();
-            oddNumberRunnableThread.join();
-            reverseNumberRunnableThread.join();
+            Thread oddNumberRunnable = new Thread(new OddNumberRunnable());
+            Thread reverseNumberRunnable = new Thread(new ReverseNumberRunnable());
+            oddNumberRunnable.start();
+            reverseNumberRunnable.start();
+            oddNumberRunnable.join();
+            reverseNumberRunnable.join();
         } catch (InterruptedException e) {
             System.out.println("Runnable interrupted");
         }
